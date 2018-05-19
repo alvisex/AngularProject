@@ -1,0 +1,26 @@
+
+
+<mat-toolbar color="primary">  
+   
+  <mat-toolbar-row>
+    
+      
+    <span>Angular project</span>
+     <span class="example-fill-remaining-space"></span>
+       <span><button mat-button [matMenuTriggerFor]="menu" color="#00796B" height="100%">Inicio</button>
+<mat-menu #menu="matMenu" md-colors="">
+  <button mat-menu-item><a routerLink="/catalog"></a></button>
+  <button mat-menu-item><a routerLink="/menu">Inicio</a></button>
+</mat-menu> </span>
+      <span>    
+<button mat-button [matMenuTriggerFor]="menu" color="#00796B">Menu</button>
+<mat-menu #menu="matMenu" md-colors="primary">
+  <button mat-menu-item><a routerLink="/catalog">Catálogo</a></button>
+  <button mat-menu-item><a routerLink="/menu">Menu</a></button>
+</mat-menu> 
+      </span>
+  </mat-toolbar-row>
+
+ 
+</mat-toolbar>
+<p></p>

@@ -1,0 +1,134 @@
+    <div class="banner"></div>
+    <img class="image1" src="assets\banner_shoping2.png">
+    <font color="#2E324C">
+        <h1 >Una tienda online con 
+    descripción de productos</h1>
+    </font>
+
+    <font color="#B73A5D">
+        <h2 >e-Shop Angular</h2>
+    </font>
+
+
+    <div class="products">
+     </div>
+    <mat-card class="example-card">
+        <mat-card-header>
+         
+            <mat-card-title>Camisa cuadr</mat-card-title>
+            <mat-card-subtitle>Mujer</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/camisa_cuadros.png">
+        <mat-card-content>
+            <p>
+                Camisa cuadrada.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <font color="#B73A5D"><button mat-button routerLink="/table-test">COMPRAR</button></font>
+          <button mat-button >
+              </button>
+
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card2">
+        <mat-card-header>
+
+            <mat-card-title>Sudadera M.</mat-card-title>
+            <mat-card-subtitle>Hombre</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/sweater.png">
+        <mat-card-content>
+            <p>
+                Sudadera M con bufanda 
+                integrada.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <font color="#B73A5D"><button mat-button routerLink="/form">COMPRAR</button></font>
+            <button mat-button routerLink="/table-test">DETALLES</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card3">
+        <mat-card-header>
+
+            <mat-card-title>Vestido Corto</mat-card-title>
+            <mat-card-subtitle>Mujer</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="dress" src="assets/dress.png">
+        <mat-card-content>
+            <p>
+                Vestido femenino con estampado (colores varios)
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <font color="#B73A5D"><button mat-button>COMPRAR</button></font>
+            <button mat-button>DETALLES</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card4">
+        <mat-card-header>
+
+            <mat-card-title>Camisa 3/4</mat-card-title>
+            <mat-card-subtitle>Hombre</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image  src="assets/tres_cuartos.png">
+        <mat-card-content>
+            <p>
+                Camisa abotonada con manga 3/4
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <font color="#B73A5D"><button mat-button>COMPRAR</button></font>
+            <button mat-button>DETALLES</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card5">
+        <mat-card-header>
+
+            <mat-card-title>Sweater mostaza</mat-card-title>
+            <mat-card-subtitle>Mujer</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="sueter" src="assets/sweater_moztasa.png">
+        <mat-card-content>
+            <p>
+                Vestido femenino con estampado (colores varios)
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <font color="#B73A5D"><button mat-button routerLink="/form">COMPRAR</button></font>
+            <button mat-button >DETALLES</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card6">
+        <mat-card-header>
+
+            <mat-card-title>Camiseta 3/4</mat-card-title>
+            <mat-card-subtitle>Hombre</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/camiseta_trescuartos.png">
+        <mat-card-content>
+            <p>
+                Camiseta con manga doble color, a 3/4.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <font color="#B73A5D"><button mat-button>COMPRAR</button></font>
+            <button mat-button>DETALLES</button>
+        </mat-card-actions>
+    </mat-card>
+
+<div>
+    <mat-card class="example-card5">
+        <li *ngFor="let product of products">
+        <a routerLink="/details/{{product.id}}">
+                Id:<strong>{{product.id}}</strong> | Nombre:{{product.name}}</a>
+      </li>
+    </mat-card></div>
+
+    <mat-button-toggle class="toggle" color="accent"><font color="#B73A5D" routerLink="/form">Registrarse directamente</font></mat-button-toggle>

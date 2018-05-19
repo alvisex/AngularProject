@@ -1,0 +1,32 @@
+<h1>Detalles del producto</h1>
+<mat-card class="cont">
+  <mat-card-header>
+  <div *ngIf="product">
+    <mat-card-title>{{product.name | uppercase }} Details</mat-card-title>
+      <div><span>id: </span>{{product.id}}</div>
+      <label>name: <input [(ngModel)]="product.name" placeholder="name"/></label></div>
+    <mat-card-subtitle>Lana 100% natural</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image   src="assets/sweater_moztasa.png" class="sueter">
+  <mat-card-content>
+    <p>$450.00 MX</p>
+  </mat-card-content>
+    <mat-card>
+  <mat-button-toggle-group>
+    <mat-button-toggle>Small</mat-button-toggle>
+    <mat-button-toggle>Medium</mat-button-toggle>
+    <mat-button-toggle>Large</mat-button-toggle>
+    <mat-button-toggle disabled>X-Large</mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-card>
+
+<mat-card>
+  <mat-button-toggle-group>
+    <mat-button-toggle value="good"><mat-icon>thumb_down</mat-icon></mat-button-toggle>
+    <mat-button-toggle value="bad"><mat-icon>thumb_up</mat-icon></mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-card>
+</mat-card>
+
+  <button  class="btn btn-warning"
+                 (click)="goBack()">Volver</button>
