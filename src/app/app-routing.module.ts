@@ -4,16 +4,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import {DetailsComponent} from './details/details.component';
-import{FormComponent} from './form/form.component';
-import{TableTestComponent} from './table-test/table-test.component';
+import {FormComponent} from './form/form.component';
+import {TableTestComponent} from './table-test/table-test.component';
 
 import {RouterModule, Routes} from '@angular/router';
+import {Cata2Component} from './cata2/cata2.component';
 
-const routes: Routes=[
-{path: '', redirectTo:'/dashboard', pathMatch:'full'},
+const routes: Routes = [
+{path: '', redirectTo: '/dashboard' , pathMatch: 'full' },
 {path: 'dashboard', component: DashboardComponent },
-{path: 'footer', component:FooterComponent},
-{path: 'catalog', component: CatalogComponent},
+{path: 'footer', component: FooterComponent},
+{path: 'catalog', component: Cata2Component},
 {path: 'form', component: FormComponent},
 {path: 'table-test', component: TableTestComponent},
 {path: 'details/:id', component: DetailsComponent}
@@ -21,8 +22,8 @@ const routes: Routes=[
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  
+
   exports: [RouterModule]
- 
+
 })
 export class AppRoutingModule { }

@@ -31,7 +31,9 @@ import { DetailsComponent } from './details/details.component';
 import { ArticleComponent } from './article/article.component';
 import {MatTableModule} from '@angular/material/table';
 import { TableTestComponent } from './table-test/table-test.component';
-import {MatDialogModule} from "@angular/material";
+import {MatDialogModule} from '@angular/material';
+import { Cata2Component } from './cata2/cata2.component';
+import { ServiciodbbService } from './serviciodbb.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import {MatDialogModule} from "@angular/material";
     FormComponent,
     DetailsComponent,
     ArticleComponent,
-    TableTestComponent
+    TableTestComponent,
+    Cata2Component
   ],
   imports: [
 
@@ -68,11 +71,12 @@ import {MatDialogModule} from "@angular/material";
 
     MatTabsModule,
     FormsModule, ReactiveFormsModule, HttpClientModule, NgbModule.forRoot(), AppRoutingModule
-    
+
   ],
-  
+
   providers: [
-  ProductService
+  ProductService,
+  ServiciodbbService
   ],
   bootstrap: [AppComponent]
 })

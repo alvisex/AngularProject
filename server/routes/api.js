@@ -17,11 +17,11 @@ var path=require('path');
 var db;
 
 const connection=(closure) => {
-    return MongoClient.connect('mongob://localhost:27017', (err, client)=>{
+    return MongoClient.connect('mongodb://localhost:27017', (err, client)=>{
         if (err) return console.log(err);
-        db=client.db('angulardb');
+        db=client.db('mongodb');
         closure(db);
-        
+
     });
 };
 
@@ -49,7 +49,7 @@ router.post('/getProducts',(req, res) => {
             res.send({response});
         })
         .then((result)=>{
-         
+
             response.data= result;
                 res.send({response});
         });

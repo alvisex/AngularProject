@@ -11,27 +11,21 @@ import {MongodbService} from '../mongodb.service';
 })
 export class CatalogComponent implements OnInit {
 products: any;
-respuesta:any;
-
-
-  constructor(private productService: ProductService,private mongodbService: MongodbService) {
-  
-    
-}
-
-  getProducts():void{
-  
-  //this.productService.getProducts().subscribe(products=>this.products=products)
-  this.mongodbService.getProducts().subscribe(respuesta=>{console.log(this.products=respuesta)} )
-  
-  }
-
+respuesta: any;
+  constructor(
+    private mongodbService: MongodbService
+  ) {}
 
   ngOnInit() {
-  this.getProducts();
-
+    // this.getProducts();
   }
-  
-
+  getProducts() {
+  // this.productService.getProducts().subscribe(products=>this.products=products)
+    console.log('entro funcion componente');
+    this.mongodbService.getProducts().subscribe(respuesta => {
+      this.respuesta = respuesta;
+      console.log(this.respuesta);
+    });
+  }
 
 }
