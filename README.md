@@ -1,3 +1,6 @@
+#Notas para ARA
+Generar Servicio: `ng generate service service-name --module=app --flat`
+
 # AngularProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
