@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import {MongodbService} from '../mongodb.service';
-
 import {ServiciodbbService} from '../serviciodbb.service';
 
 @Component({
@@ -11,6 +9,7 @@ import {ServiciodbbService} from '../serviciodbb.service';
 })
 export class Cata2Component implements OnInit {
   respuesta: any;
+  products: any;
   constructor(
      private servicio: ServiciodbbService
   ) { }
@@ -24,6 +23,7 @@ export class Cata2Component implements OnInit {
 
     this.servicio.getProducts().subscribe(respuesta => {
       this.respuesta = respuesta;
+      this.products = this.respuesta.response.data; // De esta forma obtienes el arreglo del resultado del servidor
       console.log(this.respuesta);
     });
   }
