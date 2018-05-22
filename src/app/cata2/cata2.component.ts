@@ -28,4 +28,5 @@ export class Cata2Component implements OnInit {
     });
   }
 
+
 }
