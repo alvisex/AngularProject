@@ -16,4 +16,11 @@ export class ServiciodbbService {
     return this._http.post('/api/getProducts', { headers })
       .catch( (error: any) => Observable.throw(error || 'server error'));
   }
+
+  getOneP(idd: string, cN: string) {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json'});
+    // const params = new HttpParams().set('idd', idd).set('collectionN', cN);
+    return this._http.post('/api/getOne', { idd: idd, collectionN: cN }, {headers});
+  }
+
 }
